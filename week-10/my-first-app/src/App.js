@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const message = "This is my review of the new burger joint near me" 
+
+  const handleClick = () =>{
+    alert("you clicked the message!");
+    }
+  
+  return(
+  <div>
+  <h2> Tasty burger</h2>
+  <img src="https://source.unsplash.com/400x300/?burger" alt=""></img>
+  <p>it's a good burger</p>
+  <p onClick={handleClick}>{message}</p>
+  </div>
+);
 }
 
 export default App;
