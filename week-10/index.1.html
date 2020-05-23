@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>02 Component Proponent | FAC React</title>
+
+  <body>
+    <!-- These scripts will make React and ReactDOM globally available. -->
+    <script src="./../assets/react@16.9.0/umd/react.development.js"></script>
+    <script src="./../assets/react-dom@16.9.0/umd/react-dom.development.js"></script>
+    <!-- This will let us write JSX and ES6 in a script tag with a special type of "text/babel" -->
+    <script src="./../assets/babel-standalone@7.6.0/babel.js"></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      const Title = props => <h1>{props.children}</h1>;
+
+      const Page = props => <div className="page">{props.children}</div>;
+
+      const Card = (props) => (
+        <h2>{props.children}</h2>
+
+      );
+      
+
+
+<h2> Tasty burger</h2>
+<img src="https://source.unsplash.com/400x300/?burger" alt=""></img>
+<p>it's a good burger </p>
+
+
+
+      const App = () => (
+        <Page>
+          <Title>Hello world!</Title>
+          <p>Welcome to my page</p>
+        </Page>
+      );
+
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>
